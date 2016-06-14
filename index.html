@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>姓名：</th>
+				<th>成绩：</th>
+			</tr>
+		</thead>
+		<tbody id='tbody'>
+			<tr>
+				<td>小明：</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td>小李：</td>
+				<td>80</td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		var t=document.getElementById('tbody');
+		var rows=t.rows;
+		for(var i=0;i<rows.length;i++){
+			var cell=rows[i].cells[1];
+			if(cell.innerHTML<60){
+				rows[i].bgColor='#ff3333';
+			}
+			else{
+				rows[i].bgColor='green';
+			}
+		}
+	</script>
+</body>
+</html>
